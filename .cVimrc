@@ -1,0 +1,92 @@
+" cVim配置文件
+
+" 从configpath读取cVimrc配置
+set localconfig
+let configpath = 'C:\.cVimrc'
+
+" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+" @以上内容复制到cVim配置网页中@
+" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+" 标签标题中显示标签索引
+set showtabindices  
+
+" 设置自定义搜索，没有参数的时候选择第一个
+" let searchengine dogpile = "http://www.dogpile.com/search/web?q=%s" 
+let searchengine withbase = ["http://www.dogpile.com", "http://www.dogpile.com/search/web?q=%s"]
+
+" 自动完成引擎
+let completionengines = ["google", "amazon", "imdb", "dogpile", "withbase"]
+
+" Use <C-N> and <C-P> to cycle through completion results.
+set cncpcompletion
+
+" Open all of these in a tab with `gnb` or open one of these with <N>goa where <N>
+" let qmark a = ["http://www.reddit.com", "http://www.google.com", "http://twitter.com"]
+
+" 重定义快捷键 
+" 语法 map <KEY> <MAPPING_NAME>
+" let mapleader = ","
+" map <Leader>r reloadTabUncached
+" map <Leader>x :restore<Space>
+" unmap h j k l
+" map f F
+map <C-`> lastUsedTab
+
+" 使用举例
+" command google tabnew google
+" let mapleader = ","
+" map <leader>g :google<space>
+" ,g相当于table new, 相当于
+
+
+" =============================================================
+" map和command的区别：
+"
+" map重新定义命令，而command相当于字符替换
+" =============================================================
+
+
+" You can use <Space>, which is interpreted as aliteral " " character, to enter buffer completion mode
+map gb :buffer<Space>
+
+" 创建引用变量
+" Create a variable that can be used/referenced in the command bar
+let @@reddit_prog = 'http://www.reddit.com/r/programming'
+let @@top_all = 'top?sort=top&t=all'
+let @@top_day = 'top?sort=top&t=day'
+
+" TA binding opens 'http://www.reddit.com/r/programming/top?sort=top&t=all' in a new tab
+map TA :tabnew @@reddit_prog/@@top_all<CR>
+map TD :tabnew @@reddit_prog/@@top_day<CR>
+
+" baidu一下粘贴板内容
+map T :tabnew baidu @"<CR>
+
+" 基于站点的配置
+" this will enable the config block below on the domain 'reddit.com'
+site '*://*.reddit.com/*' {
+      set numerichints
+}
+
+" 页面加载时运行命令
+" In this case, when pages with a file ending in '.js' are loaded,
+" cVim will pin the tab and then scroll down
+site '*://*/*.js' {
+      call :pintab
+      call scrollDown
+}
+
+" 设置不启用cVim的网页
+let blacklists = ["https://checkvist.com/*","https://inbox.google.com/*","https://calendar.google.com/*","https://drive.google.com/*","https://keep.google.com/*","https://mail.google.com/*","https://mubu.com/*","https://leanote.com/*","https://docs.google.com/*","https://mynoise.net/*","https://onedrive.live.com/*","https://kiwivm.64clouds.com/*","https://dida365.com/*","http://localhost/*","https://dynalist.io/*","http://cv.ftqq.com/*","https://todoist.com/*","https://www.youtube.com/*"]
+
+
+"  *******常用的快捷键**********
+"  <N>%          跳到第几个标签页
+"  T             百度搜索当前粘贴板内容
+"  S/D           前进/后退
+"  x             关闭当前标签页
+"  gxT/gx0       关闭左侧标签页/左侧所有标签页
+"  gxt/gx$       关闭右侧标签页/右侧所有标签页
+"  <C-6>         切换到上个标签页
