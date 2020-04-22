@@ -1,0 +1,2 @@
+# .cVimrc
+.cVimrc for Chrome
