@@ -38,8 +38,6 @@ map <C-`> lastUsedTab
 " command google tabnew google
 " let mapleader = ","
 " map <leader>g :google<space>
-" ,g相当于table new, 相当于
-
 
 " =============================================================
 " map和command的区别：
@@ -89,4 +87,4 @@ let blacklists = ["https://checkvist.com/*","https://inbox.google.com/*","https:
 "  x             关闭当前标签页
 "  gxT/gx0       关闭左侧标签页/左侧所有标签页
 "  gxt/gx$       关闭右侧标签页/右侧所有标签页
-"  <C-6>         切换到上个标签页
+"  <C-`>         切换到上个标签页
