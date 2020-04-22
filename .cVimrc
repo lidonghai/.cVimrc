@@ -1,12 +1,8 @@
 " cVim配置文件
 
 " 从configpath读取cVimrc配置
-set localconfig
-let configpath = 'C:\.cVimrc'
-
-" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-" @以上内容复制到cVim配置网页中@
-" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+" set localconfig
+" let configpath = 'C:\.cVimrc'
 
 
 " 标签标题中显示标签索引
