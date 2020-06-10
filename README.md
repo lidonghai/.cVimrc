@@ -3,9 +3,10 @@
 
 以下内容复制到cVim配置网页中
 " 从configpath读取cVimrc配置
+```c
 set localconfig
 let configpath = 'C:\.cVimrc'
-
+```
 
 
 
