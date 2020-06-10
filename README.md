@@ -1,8 +1,11 @@
-# .cVimrc
-.cVimrc for Chrome
+#ATTENTION
+使用本配置文件时注意：需要在拓展管理里打开“允许访问文件网址”
 
-把vim的高效性搬运到Chrome中，爽的不要不要的，极力推荐。
+以下内容复制到cVim配置网页中
+" 从configpath读取cVimrc配置
+set localconfig
+let configpath = 'C:\.cVimrc'
 
-提示：
-使用source命令之前确保开启插件“允许访问文件网址”选项。
+
+
 
