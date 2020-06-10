@@ -1,19 +1,13 @@
-" cVim配置文件
-
-" 从configpath读取cVimrc配置
-" set localconfig
-" let configpath = 'C:\.cVimrc'
-
-
 " 标签标题中显示标签索引
 set showtabindices  
 
 " 设置自定义搜索，没有参数的时候选择第一个
 " let searchengine dogpile = "http://www.dogpile.com/search/web?q=%s" 
-let searchengine withbase = ["http://www.dogpile.com", "http://www.dogpile.com/search/web?q=%s"]
+" let searchengine withbase = ["http://www.dogpile.com", "http://www.dogpile.com/search/web?q=%s"]
+" let searchengine tb = ["https://www.taobao.com", "https://s.taobao.com/search?q=%s"]
 
 " 自动完成引擎
-let completionengines = ["google", "amazon", "imdb", "dogpile", "withbase"]
+let completionengines = ["google", "amazon", "imdb", "dogpile", "withbase", "tb"]
 
 " Use <C-N> and <C-P> to cycle through completion results.
 set cncpcompletion
@@ -37,10 +31,8 @@ map <C-`> lastUsedTab
 
 " =============================================================
 " map和command的区别：
-"
 " map重新定义命令，而command相当于字符替换
 " =============================================================
-
 
 " You can use <Space>, which is interpreted as aliteral " " character, to enter buffer completion mode
 map gb :buffer<Space>
@@ -57,6 +49,7 @@ map TD :tabnew @@reddit_prog/@@top_day<CR>
 
 " baidu一下粘贴板内容
 map T :tabnew baidu @"<CR>
+map T :tabnew tb @"<CR>
 
 " 基于站点的配置
 " this will enable the config block below on the domain 'reddit.com'
@@ -83,4 +76,5 @@ let blacklists = ["https://checkvist.com/*","https://inbox.google.com/*","https:
 "  x             关闭当前标签页
 "  gxT/gx0       关闭左侧标签页/左侧所有标签页
 "  gxt/gx$       关闭右侧标签页/右侧所有标签页
-"  <C-`>         切换到上个标签页
+"  <C-6>         切换到上个标签页
+"  B             切换标签
