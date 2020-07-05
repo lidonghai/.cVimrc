@@ -69,14 +69,3 @@ site '*://*/*.js' {
 
 " 设置不启用cVim的网页
 let blacklists = ["https://checkvist.com/*","https://inbox.google.com/*","https://calendar.google.com/*","https://drive.google.com/*","https://keep.google.com/*","https://mail.google.com/*","https://mubu.com/*","https://leanote.com/*","https://docs.google.com/*","https://mynoise.net/*","https://onedrive.live.com/*","https://kiwivm.64clouds.com/*","https://dida365.com/*","http://localhost/*","https://dynalist.io/*","http://cv.ftqq.com/*","https://todoist.com/*","https://www.youtube.com/*"]
-
-
-"  *******常用的快捷键**********
-"  <N>%          跳到第几个标签页
-"  T             百度搜索当前粘贴板内容
-"  S/D           前进/后退
-"  x             关闭当前标签页
-"  gxT/gx0       关闭左侧标签页/左侧所有标签页
-"  gxt/gx$       关闭右侧标签页/右侧所有标签页
-"  <C-6>         切换到上个标签页
-"  B             切换标签
