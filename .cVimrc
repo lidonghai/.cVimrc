@@ -22,6 +22,8 @@ set cncpcompletion
 " map <Leader>x :restore<Space>
 " unmap h j k l
 " map f F
+" 替换快捷键<C-6>为<C-`>
+unmap <C-6>
 map <C-`> lastUsedTab
 
 " 使用举例
