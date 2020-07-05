@@ -4,7 +4,7 @@ set showtabindices
 " 设置自定义搜索，没有参数的时候选择第一个
 " let searchengine dogpile = "http://www.dogpile.com/search/web?q=%s" 
 " let searchengine withbase = ["http://www.dogpile.com", "http://www.dogpile.com/search/web?q=%s"]
-" let searchengine tb = ["https://www.taobao.com", "https://s.taobao.com/search?q=%s"]
+let searchengine tb = ["https://www.taobao.com", "https://s.taobao.com/search?q=%s"]
 
 " 自动完成引擎
 let completionengines = ["google", "amazon", "imdb", "dogpile", "withbase", "tb"]
@@ -49,8 +49,7 @@ let @@top_day = 'top?sort=top&t=day'
 map TA :tabnew @@reddit_prog/@@top_all<CR>
 map TD :tabnew @@reddit_prog/@@top_day<CR>
 
-" baidu一下粘贴板内容
-map T :tabnew baidu @"<CR>
+" taobao一下粘贴板内容
 map T :tabnew tb @"<CR>
 
 " 基于站点的配置
